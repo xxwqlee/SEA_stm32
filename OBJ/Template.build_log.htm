@@ -3,38 +3,47 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.21.1.0
-Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: l xy, sc, LIC=IC963-AX27M-VJT6J-U80NZ-4RU7B-6HXEU
+IDE-Version: ¦ÌVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a ab, b, LIC=3UUPC-7RL40-ZDEK6-D2S56-L22W9-P1LGR
  
 Tool Versions:
-Toolchain:       MDK-ARM Professional  Version: 5.21a
+Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
 Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 3 (build 300)
-Assembler:       Armasm.exe V5.06 update 3 (build 300)
-Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
-Library Manager: ArmAr.exe V5.06 update 3 (build 300)
-Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
-CPU DLL:         SARMCM3.DLL V5.21a
-Dialog DLL:      DCM.DLL V1.13.8.0
-Target DLL:      Segger\JL2CM3.dll V2.99.23.0
-Dialog DLL:      TCM.DLL V1.14.14.0
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
-D:\02. Program\01. Keil\SEA\USER\SEA.uvprojx
-Project File Date:  03/19/2018
+D:\SEA\01. Keil\SEA\USER\SEA.uvprojx
+Project File Date:  09/18/2018
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Template'
-"..\OBJ\Template.axf" - 0 Error(s), 0 Warning(s).
+compiling timer.c...
+..\HARDWARE\timer.c(252): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\timer.c(31): warning:  #177-D: variable "count1_0" was declared but never referenced
+  static int count1_0=0,count2_0=0;
+..\HARDWARE\timer.c(31): warning:  #177-D: variable "count2_0" was declared but never referenced
+  static int count1_0=0,count2_0=0;
+..\HARDWARE\timer.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=16794 RO-data=794 RW-data=132 ZI-data=2340  
+FromELF: creating hex file...
+"..\OBJ\Template.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
-  D:\02. Program\01. Keil\SEA\USER\RTE
-  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include
+  D:\SEA\01. Keil\SEA\USER\RTE
+  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.7.0
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

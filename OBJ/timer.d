@@ -79,3 +79,4 @@
 ..\obj\timer.o: ..\HALLIB\Inc\stm32f7xx_hal.h
 ..\obj\timer.o: ..\HARDWARE\led.h
 ..\obj\timer.o: ..\HARDWARE\can.h
+..\obj\timer.o: ..\SYSTEM\delay\delay.h
