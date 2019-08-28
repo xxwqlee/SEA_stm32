@@ -73,31 +73,31 @@ void TIM3_IRQHandler(void)
  
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)//更新中断（溢出）发生时执行Tout= ((arr+1)*(psc+1))/Tclk
 {
-//		int count1=0,count2=0,error=0,derror=0,speed1=0,speed2=0;
-////		int ID=0x401; //位置环
-//	  int ID=0x601; //速度环
-//		int P=56,D=40;
-//		int T=0;
-////		u8 MS[8]={0x2f,0x60,0x60,0x00,0x03};                //启动速度环
-////		CAN1_Send_Msg(MS,6,ID);
-//		count1=__HAL_TIM_GET_COUNTER(&TIM5_Handler);
-//		count2=__HAL_TIM_GET_COUNTER(&TIM2_Handler);
-//		error=count1*16-count2;
-//		speed1=(count1-count1_0)*10^4;
-//		speed2=(count2-count2_0)*10^4;
-//		derror=speed1*16-speed2;
-//		T=10*(P*error+D*derror);
-//		
-//		
-//		count1_0=count1;
-//		count2_0=count2;
-//		turn(T);
-////		M[0]=*turn(error);
-//		ID=0x501;
-//		CAN1_Send_Msg(buf1,6,ID); 
-//		CAN1_Send_Msg(buf2,6,ID); 
-//		
-//		printf("%d    %d\r\n",count1*16,count2);
+		int count1=0,count2=0,error=0,derror=0,speed1=0,speed2=0;
+//		int ID=0x401; //位置环
+	  int ID=0x601; //速度环
+		int P=56,D=40;
+		int T=0;
+//		u8 MS[8]={0x2f,0x60,0x60,0x00,0x03};                //启动速度环
+//		CAN1_Send_Msg(MS,6,ID);
+		count1=__HAL_TIM_GET_COUNTER(&TIM5_Handler);
+		count2=__HAL_TIM_GET_COUNTER(&TIM2_Handler);
+		error=count1*16-count2;
+		speed1=(count1-count1_0)*10^4;
+		speed2=(count2-count2_0)*10^4;
+		derror=speed1*16-speed2;
+		T=10*(P*error+D*derror);
+		
+		
+		count1_0=count1;
+		count2_0=count2;
+		turn(T);
+//		M[0]=*turn(error);
+		ID=0x501;
+		CAN1_Send_Msg(buf1,6,ID); 
+		CAN1_Send_Msg(buf2,6,ID); 
+		
+		printf("%d    %d\r\n",count1*16,count2);
 }
 //定时器输入捕获中断处理回调函数，该函数在HAL_TIM_IRQHandler中会被调用
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)//捕获中断发生时执行
